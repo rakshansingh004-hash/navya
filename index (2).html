@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>US ❤️ | Season 1 · Episode 18</title>
+  <meta name="description" content="A Netflix-style love story. US ❤️ — Season 1, Episode 18." />
+
+  <!-- Google Fonts:
+       Bebas Neue  -> bold cinematic display face (titles, big numbers)
+       Poppins     -> clean modern body/UI face
+       Playfair Display -> warm serif italic, reserved only for the love letter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;1,500;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =========================================================
+       LOADING SCREEN
+       A small homage to the Netflix "ta-dum" logo build animation.
+       Red bars converge, a heartbeat pulses, then the curtain lifts
+       on your show.
+  ========================================================== -->
+  <div id="loading-screen" aria-hidden="true">
+    <div class="loader-bars">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="loader-logo">US <span class="heart">❤️</span></div>
+    <p class="loader-caption">a series, starring the two of us</p>
+  </div>
+
+  <!-- Ambient drifting particles, sits behind everything -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Floating hearts get injected here continuously by script.js -->
+  <div id="floating-hearts" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       TOP NAVIGATION — Netflix-style fixed bar, glass on scroll
+  ========================================================== -->
+  <header id="top-nav">
+    <a href="#hero" class="nav-logo">US <span class="heart">❤️</span></a>
+    <nav class="nav-links">
+      <a href="#ep1">Episodes</a>
+      <a href="#soundtrack">Soundtrack</a>
+      <a href="#reasons">Reasons</a>
+      <a href="#comingsoon">Future</a>
+      <a href="#letter">Letter</a>
+    </nav>
+  </header>
+
+  <!-- =========================================================
+       HERO — the show's title banner
+  ========================================================== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content fade-in">
+      <p class="hero-eyebrow">A NETFLIX-STYLE ORIGINAL</p>
+      <h1 class="hero-title">US <span class="heart">❤️</span></h1>
+      <p class="hero-subtitle">Season 1 &nbsp;•&nbsp; Episode 18</p>
+
+      <div class="hero-meta">
+        <span class="tag">18+ Months</span>
+        <span class="tag">Romance</span>
+        <span class="tag">Comedy</span>
+        <span class="tag">Forever</span>
+      </div>
+
+      <p class="hero-description">
+        A story about two people who unexpectedly became
+        each other's favorite person.
+      </p>
+
+      <p class="hero-tagline">"My favorite series, and I hope it never gets cancelled."</p>
+
+      <button id="continue-watching" class="btn-primary">
+        <span class="play-icon">▶</span> Continue Watching
+      </button>
+    </div>
+
+    <div class="scroll-hint">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       EPISODE LIST — intro label for the episode section
+  ========================================================== -->
+  <div class="section-heading fade-in">
+    <h2>Episodes</h2>
+    <p>Season 1 · Our Story So Far</p>
+  </div>
+
+  <!-- ---------- EPISODE 1 — THE BEGINNING ---------- -->
+  <section class="episode" id="ep1">
+    <div class="episode-inner fade-in">
+      <div class="episode-thumb">
+        <span class="ep-number">01</span>
+        <div class="thumb-placeholder">
+          <span>📷</span>
+          <p>add a photo from where it all started</p>
+        </div>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+      </div>
+      <div class="episode-info">
+        <p class="ep-tag">Pilot</p>
+        <h3>The Beginning</h3>
+        <p class="ep-desc">How we first met.</p>
+        <p class="ep-longtext">
+          Every great series has an origin episode — the one fans rewatch
+          just to feel that first spark again. This is ours. Drop in the photo,
+          the message, the moment that started it all. Add a caption below
+          and let it live here forever.
+        </p>
+        <div class="memory-grid">
+          <div class="memory-card"><span>📷</span><p>Photo memory</p></div>
+          <div class="memory-card"><span>💬</span><p>First message</p></div>
+          <div class="memory-card"><span>📍</span><p>Where we met</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- EPISODE 2 — FIRST DATE ---------- -->
+  <section class="episode reverse" id="ep2">
+    <div class="episode-inner fade-in">
+      <div class="episode-thumb">
+        <span class="ep-number">02</span>
+        <div class="thumb-placeholder">
+          <span>📷</span>
+          <p>add a photo from your first date</p>
+        </div>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+      </div>
+      <div class="episode-info">
+        <p class="ep-tag">Origin Story</p>
+        <h3>First Date</h3>
+        <p class="ep-desc">Two awkward people trying their best.</p>
+        <p class="ep-longtext">
+          Nervous hands, rehearsed jokes, and a million small efforts to seem
+          cool while feeling anything but. Looking back, it's perfect exactly
+          because it wasn't.
+        </p>
+        <div class="memory-grid">
+          <div class="memory-card"><span>📷</span><p>The outfit</p></div>
+          <div class="memory-card"><span>🍽️</span><p>Where we ate</p></div>
+          <div class="memory-card"><span>😳</span><p>Most awkward moment</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- EPISODE 3 — ADVENTURES ---------- -->
+  <section class="episode" id="ep3">
+    <div class="episode-inner fade-in">
+      <div class="episode-thumb">
+        <span class="ep-number">03</span>
+        <div class="thumb-placeholder">
+          <span>📷</span>
+          <p>add a photo from an adventure together</p>
+        </div>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+      </div>
+      <div class="episode-info">
+        <p class="ep-tag">Fan Favorite</p>
+        <h3>Adventures</h3>
+        <p class="ep-desc">Unexpected memories and moments together.</p>
+        <p class="ep-longtext">
+          Trips that almost went wrong, plans we made up on the spot, and
+          the kind of memories that turn into "remember when…" stories for
+          years to come.
+        </p>
+        <div class="memory-grid">
+          <div class="memory-card"><span>🗺️</span><p>A trip we took</p></div>
+          <div class="memory-card"><span>🌧️</span><p>A plan that changed</p></div>
+          <div class="memory-card"><span>⭐</span><p>Best surprise</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- EPISODE 4 — THROUGH EVERYTHING ---------- -->
+  <section class="episode reverse" id="ep4">
+    <div class="episode-inner fade-in">
+      <div class="episode-thumb">
+        <span class="ep-number">04</span>
+        <div class="thumb-placeholder">
+          <span>📷</span>
+          <p>add a photo from a hard but real moment</p>
+        </div>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+      </div>
+      <div class="episode-info">
+        <p class="ep-tag">Season Arc</p>
+        <h3>Through Everything</h3>
+        <p class="ep-desc ep-quote">
+          "Not every episode was perfect, but every episode was worth it."
+        </p>
+        <p class="ep-longtext">
+          The misunderstandings, the busy weeks, the distance, the hard
+          conversations — every show has them. What matters is we kept
+          choosing to watch the next episode together, every single time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- EPISODE 5 — INSIDE JOKES ---------- -->
+  <section class="episode" id="ep5">
+    <div class="section-heading fade-in">
+      <h2>Episode 05</h2>
+      <p>Inside Jokes &amp; Nicknames</p>
+    </div>
+    <div class="joke-grid fade-in">
+      <div class="joke-card">
+        <div class="joke-front"><span>😂</span><p>Tap to reveal</p></div>
+        <div class="joke-back"><p>Add your inside joke #1 here</p></div>
+      </div>
+      <div class="joke-card">
+        <div class="joke-front"><span>🤭</span><p>Tap to reveal</p></div>
+        <div class="joke-back"><p>Add your nickname for her here</p></div>
+      </div>
+      <div class="joke-card">
+        <div class="joke-front"><span>🐣</span><p>Tap to reveal</p></div>
+        <div class="joke-back"><p>Add that one ridiculous moment here</p></div>
+      </div>
+      <div class="joke-card">
+        <div class="joke-front"><span>🍕</span><p>Tap to reveal</p></div>
+        <div class="joke-back"><p>Add your "our thing" reference here</p></div>
+      </div>
+      <div class="joke-card">
+        <div class="joke-front"><span>🎭</span><p>Tap to reveal</p></div>
+        <div class="joke-back"><p>Add the impression you do of her here</p></div>
+      </div>
+      <div class="joke-card">
+        <div class="joke-front"><span>🌙</span><p>Tap to reveal</p></div>
+        <div class="joke-back"><p>Add a 2am conversation memory here</p></div>
+      </div>
+    </div>
+    <p class="hint-text fade-in">tap or hover a card ❤️</p>
+  </section>
+
+  <!-- ---------- EPISODE 6 — OUR SOUNDTRACK ---------- -->
+  <section id="soundtrack">
+    <div class="section-heading fade-in">
+      <h2>Episode 06</h2>
+      <p>Our Soundtrack</p>
+    </div>
+
+    <div class="song-list fade-in">
+
+      <div class="song-card" data-track="1">
+        <div class="album-art"><span>🎵</span></div>
+        <div class="song-info">
+          <p class="song-title">Our Song #1</p>
+          <p class="song-artist">add the song title &amp; artist</p>
+        </div>
+        <div class="equalizer"><span></span><span></span><span></span><span></span></div>
+        <button class="play-btn" aria-label="Play song 1">▶</button>
+        <!-- Replace src below with your real audio file to make this fully playable -->
+        <audio src="" preload="none"></audio>
+      </div>
+
+      <div class="song-card" data-track="2">
+        <div class="album-art"><span>🎵</span></div>
+        <div class="song-info">
+          <p class="song-title">Our Song #2</p>
+          <p class="song-artist">add the song title &amp; artist</p>
+        </div>
+        <div class="equalizer"><span></span><span></span><span></span><span></span></div>
+        <button class="play-btn" aria-label="Play song 2">▶</button>
+        <audio src="" preload="none"></audio>
+      </div>
+
+      <div class="song-card" data-track="3">
+        <div class="album-art"><span>🎵</span></div>
+        <div class="song-info">
+          <p class="song-title">The "Us" Anthem</p>
+          <p class="song-artist">add the song title &amp; artist</p>
+        </div>
+        <div class="equalizer"><span></span><span></span><span></span><span></span></div>
+        <button class="play-btn" aria-label="Play song 3">▶</button>
+        <audio src="" preload="none"></audio>
+      </div>
+
+      <div class="song-card" data-track="4">
+        <div class="album-art"><span>🎵</span></div>
+        <div class="song-info">
+          <p class="song-title">The Road-Trip One</p>
+          <p class="song-artist">add the song title &amp; artist</p>
+        </div>
+        <div class="equalizer"><span></span><span></span><span></span><span></span></div>
+        <button class="play-btn" aria-label="Play song 4">▶</button>
+        <audio src="" preload="none"></audio>
+      </div>
+
+    </div>
+    <p class="hint-text fade-in">tip: add real mp3 files and drop the file path into each &lt;audio src=""&gt; tag in index.html</p>
+  </section>
+
+  <!-- ---------- EPISODE 7 — 100 REASONS WHY I LOVE NAVYA ---------- -->
+  <section id="reasons">
+    <div class="section-heading fade-in">
+      <h2>Episode 07</h2>
+      <p>100 Reasons Why I Love Navya</p>
+    </div>
+
+    <div class="reasons-box fade-in">
+      <div class="reason-counter"><span id="reason-index">1</span> / <span id="reason-total">100</span></div>
+
+      <div class="reason-card-stage">
+        <div class="reason-card" id="reason-card">
+          <span class="reason-quote-mark">“</span>
+          <p id="reason-text">Your smile.</p>
+        </div>
+      </div>
+
+      <button id="next-reason" class="btn-primary">Next Reason ❤️</button>
+    </div>
+  </section>
+
+  <!-- ---------- EPISODE 8 — COMING SOON ---------- -->
+  <section id="comingsoon">
+    <div class="section-heading fade-in">
+      <h2>Episode 08</h2>
+      <p>Coming Soon...</p>
+    </div>
+
+    <div class="future-grid fade-in">
+      <div class="future-card">
+        <span class="future-icon">🌇</span>
+        <h4>Watching Sunsets</h4>
+        <p>Every sky, with you next to me.</p>
+      </div>
+      <div class="future-card">
+        <span class="future-icon">✈️</span>
+        <h4>Traveling Together</h4>
+        <p>New cities, same favorite person.</p>
+      </div>
+      <div class="future-card">
+        <span class="future-icon">📸</span>
+        <h4>Making Memories</h4>
+        <p>An entire archive we haven't filmed yet.</p>
+      </div>
+      <div class="future-card">
+        <span class="future-icon">🌳</span>
+        <h4>Growing Old Together</h4>
+        <p>Still picking you, every single season.</p>
+      </div>
+    </div>
+
+    <p class="renewed-tagline fade-in">Renewed for many more seasons.</p>
+  </section>
+
+  <!-- =========================================================
+       TIME TOGETHER COUNTER
+  ========================================================== -->
+  <section id="counter">
+    <div class="counter-inner fade-in">
+      <p class="counter-eyebrow">STILL AIRING</p>
+      <h2>Time Together</h2>
+
+      <div class="counter-grid">
+        <div class="counter-unit">
+          <span id="count-days">0000</span>
+          <p>Days</p>
+        </div>
+        <div class="counter-unit">
+          <span id="count-hours">00</span>
+          <p>Hours</p>
+        </div>
+        <div class="counter-unit">
+          <span id="count-minutes">00</span>
+          <p>Minutes</p>
+        </div>
+        <div class="counter-unit">
+          <span id="count-seconds">00</span>
+          <p>Seconds</p>
+        </div>
+      </div>
+
+      <p class="counter-caption">Every second with you has been my favorite episode ❤️</p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       LOVE LETTER
+  ========================================================== -->
+  <section id="letter">
+    <div class="letter-card fade-in">
+      <p class="letter-stamp">❤️</p>
+      <h2 class="letter-title">Dear Navya ❤️</h2>
+
+      <div class="letter-body">
+        <p>
+          If you're reading this, it means you made it through every episode —
+          the clumsy pilot, the slow-burn middle, the messy bits we didn't
+          plan for — and you're still here, still choosing this story.
+          I don't think I'll ever find the right words for what that means to me,
+          but I'm going to try anyway.
+        </p>
+        <p>
+          Thank you for eighteen months of feeling like the main character in
+          my own life for the first time. Thank you for the laughter that
+          sneaks up on me on ordinary Tuesdays, for the way you make a quiet
+          night in feel like an event, and for loving me on the days I didn't
+          make it easy to. You turned an ordinary timeline into something
+          worth marking, worth celebrating, worth building a whole website
+          about at 1am.
+        </p>
+        <p>
+          I'm grateful for the version of me that exists because of you — calmer,
+          softer, more sure of what matters. And I'm so excited for everything
+          we haven't filmed yet: the trips we'll take, the home we'll build,
+          the inside jokes we haven't even thought of. I want every season after
+          this one, too.
+        </p>
+        <p class="letter-closing">
+          Thank you for being my favorite story.<br />
+          Happy 1.5 Years ❤️<br />
+          Forever my favorite series.
+        </p>
+      </div>
+
+      <p class="letter-signoff">— Yours, always</p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FINAL SCENE
+  ========================================================== -->
+  <section id="finalscene">
+    <div class="final-content fade-in">
+      <h2 class="tbc-text">TO BE CONTINUED<span class="dots">...</span></h2>
+      <p class="season2-text">
+        Season 2 loading<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span>
+      </p>
+      <p class="final-credit">a love story, written and starring the two of us</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
