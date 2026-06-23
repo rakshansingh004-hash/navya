@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 🗓️ Set this to the exact date & time you started dating.
   // Format: new Date('YYYY-MM-DDTHH:MM:SS')
-  const START_DATE = new Date('2024-12-20T00:00:00');
+  const START_DATE = new Date('2024-11-27T00:00:00');
 
   // 💬 Episode 7 — add as many reasons as you like, the carousel loops.
   const REASONS = [
@@ -23,21 +23,26 @@ document.addEventListener('DOMContentLoaded', () => {
     "The way you care.",
     "The way you make ordinary days special.",
     "How you remember the tiny things I forget about myself.",
-    "Your hugs feel like the end of a long episode — pure relief.",
-    "The way you say my name when you're trying not to laugh.",
-    "You make even the boring days feel like a good plot point.",
-    "Your patience with me, even on my worst days.",
+    "Your smelly potty (sometimes)",
+    "The way you pronounce your mother tongue",
+    "How you can change my mood in a few minutes",
+    "How patient you are with everyone",
     "The way you get excited about things you love.",
-    "How safe I feel just talking to you.",
-    "The way you fight for us when it actually matters.",
-    "Your honesty, even when it's hard to say.",
+    "How you say you wanna hit me when you miss me",
+    "When you say tell the pilot drive safe",
+    "When you try to put a restriction on my samosas, thats not happening.",
     "How you make a house feel like home, even over a phone call.",
     "The way you believe in me more than I do sometimes.",
-    "Your weird, specific sense of humor.",
+    "The way you do my dance",
     "How you never let me feel alone in anything.",
-    "The way our silences are comfortable, not awkward.",
+    "The way you say ALOT ALOT ALOT ALOT ALOT ALOT ALOT",
     "Every single inside joke we've built together.",
-    "Simply put — you. All of you.",
+    "The way you comfort me whenever i lose a match or i don't play good",
+    "How you always brimg me meatballs (even tho they are not sufficient for me",
+    "The look you give me when i ragebait you",
+    "The way you say 'Kya hai"",
+    "How you are so thoughtful in eveyrthing you do" 
+     
   ];
 
   /* ===================================================================
