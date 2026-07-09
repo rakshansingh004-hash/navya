@@ -489,9 +489,25 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--gray-dim);
   text-align: center;
   padding: 20px;
+  position: relative;
+  overflow: hidden;
 }
 .thumb-placeholder span { font-size: 2.4rem; opacity: 0.5; }
 .thumb-placeholder p { font-size: 0.82rem; max-width: 220px; }
+
+/* When a span inside thumb-placeholder contains an img (your real photos),
+   pull it out of inline flow and make it fill the entire card cinematic-style */
+.thumb-placeholder span img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 0;
+  opacity: 1;
+}
 
 .progress-bar {
   height: 4px;
@@ -564,6 +580,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .memory-card span { font-size: 1.4rem; display: block; margin-bottom: 6px; opacity: 0.85; }
 .memory-card p { font-size: 0.72rem; color: var(--gray); }
+
+/* When memory-card span holds a real photo instead of an emoji,
+   show it as a neat rounded thumbnail above the caption */
+.memory-card span img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 6px;
+  border: 1px solid var(--glass-border);
+}
 
 /* ---------------------------------------------------------------
    9. EPISODE 5 — INSIDE JOKES (flip cards)
