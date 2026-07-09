@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "The way you comfort me whenever i lose a match or i don't play good",
     "How you always brimg me meatballs (even tho they are not sufficient for me",
     "The look you give me when i ragebait you",
-    "The way you say 'Kya hai"",
+    "The way you say 'Kya hai",
     "How you are so thoughtful in eveyrthing you do" 
      
   ];
